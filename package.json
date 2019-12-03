@@ -1,0 +1,16 @@
+{
+	"scripts": {
+		"prestart": "tsc -p .",
+		"start": "node dist/main"
+	},
+	"dependencies": {
+		"@types/react": "^16.9.14",
+		"ink": "^2.6.0",
+		"ink-text-input": "^3.2.1",
+		"react": "^16.12.0",
+		"typescript": "^3.7.2"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.14"
+	}
+}
