@@ -1,5 +1,6 @@
 {
 	"scripts": {
+		"watch": "tsc -w -p .",
 		"prestart": "tsc -p .",
 		"start": "node dist/main"
 	},
