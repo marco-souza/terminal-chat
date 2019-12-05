@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
 import { Text, Box, Static } from 'ink'
 
-import { useMessages } from '../hooks/messages';
+import useMessages from '../redux/messages';
 
 export default () => {
-  const { listMessages } = useMessages()
+  const { messageList } = useMessages()
 
   return (
     <Box height={3}>
       <Static>
-        {listMessages
+        {messageList
           .map(({ username, message }) => (
             <Box width='100vw' key={username + message}>
               <Text bold>{username} said: </Text>

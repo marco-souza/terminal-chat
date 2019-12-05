@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { Box } from 'ink'
 import TextInput from 'ink-text-input';
 
-import { useMessages } from '../hooks/messages';
+import useMessages from '../redux/messages';
 
 export default () => {
-  const { addMessage } = useMessages()
+  const { actions } = useMessages()
   const [message, setMessageText] = useState<string>('')
 
   const handleSubmit = () => {
-    message && addMessage({
+    message && actions.addMessage({
       username: process.env.USER || 'guest',
       message,
     })
