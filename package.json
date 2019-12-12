@@ -10,7 +10,7 @@
 	"scripts": {
 		"watch": "tsc -w -p .",
 		"prestart": "npx pnpm install",
-		"start": "npm run build && ./dist/main",
+		"start": "npm run build && node dist/main",
 		"build": "tsc -p . && sed -i '1i#! env node' dist/main.js && chmod +x dist/main.js"
 	},
 	"dependencies": {
