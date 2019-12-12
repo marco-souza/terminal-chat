@@ -6,7 +6,16 @@ A CLI Chat for developers and linux lovers
 
 ## Usage
 
-We still developing this app, so you can run it only in developer mode. For that:
+Just install our npm package and run:
+
+```bash
+# install chat
+npm i -u tt-chat
+# run
+tchat
+```
+
+We still developing this app, so if you wanna run in developer mode:
 
 1. Clone this repository: `git clone git@github.com:marco-souza/terminal-chat.git && cd terminal-chat`
 2. Install dependencies: `pnpm install`
