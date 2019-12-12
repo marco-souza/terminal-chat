@@ -17,13 +17,17 @@ export default () => {
   }
 
   return (
-    <Box height={1} padding={2}>
-      <TextInput
-        placeholder='enter your msg here'
-        value={message}
-        onChange={setMessageText}
-        onSubmit={handleSubmit}
-      />
+    <Box padding={1}>
+      > {
+        <TextInput
+          placeholder='enter your msg here'
+          value={message}
+          onChange={setMessageText}
+          onSubmit={handleSubmit}
+          showCursor
+          highlightPastedText
+        />
+      }
     </Box>
   )
 }
