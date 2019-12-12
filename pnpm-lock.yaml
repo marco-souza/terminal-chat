@@ -1,6 +1,4 @@
 dependencies:
-  '@types/react': 16.9.15
-  '@types/react-redux': 7.1.5
   chalk: 3.0.0
   ink: 2.6.0_e1f4dc9876e8b65deb5656daab152814
   ink-text-input: 3.2.1
@@ -10,9 +8,11 @@ dependencies:
   redux: 4.0.4
   redux-observable: 1.2.0_redux@4.0.4+rxjs@6.5.3
   rxjs: 6.5.3
-  typescript: 3.7.3
 devDependencies:
   '@types/node': 12.12.14
+  '@types/react': 16.9.15
+  '@types/react-redux': 7.1.5
+  typescript: 3.7.3
 lockfileVersion: 5.1
 packages:
   /@babel/runtime/7.7.4:
@@ -29,7 +29,7 @@ packages:
     dependencies:
       '@types/react': 16.9.15
       hoist-non-react-statics: 3.3.1
-    dev: false
+    dev: true
     resolution:
       integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
   /@types/node/12.12.14:
@@ -37,7 +37,6 @@ packages:
     resolution:
       integrity: sha512-u/SJDyXwuihpwjXy7hOOghagLEV1KdAST6syfnOk6QZAMzZuWZqXy5aYYZbh8Jdpd4escVFP0MvftHNDb9pruA==
   /@types/prop-types/15.7.3:
-    dev: false
     resolution:
       integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
   /@types/react-redux/7.1.5:
@@ -46,14 +45,13 @@ packages:
       '@types/react': 16.9.15
       hoist-non-react-statics: 3.3.1
       redux: 4.0.4
-    dev: false
+    dev: true
     resolution:
       integrity: sha512-ZoNGQMDxh5ENY7PzU7MVonxDzS1l/EWiy8nUhDqxFqUZn4ovboCyvk4Djf68x6COb7vhGTKjyjxHxtFdAA5sUA==
   /@types/react/16.9.15:
     dependencies:
       '@types/prop-types': 15.7.3
       csstype: 2.6.7
-    dev: false
     resolution:
       integrity: sha512-WsmM1b6xQn1tG3X2Hx4F3bZwc2E82pJXt5OPs2YJgg71IzvUoKOSSSYOvLXYCg1ttipM+UuA4Lj3sfvqjVxyZw==
   /ansi-escapes/3.2.0:
@@ -191,7 +189,6 @@ packages:
     resolution:
       integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
   /csstype/2.6.7:
-    dev: false
     resolution:
       integrity: sha512-9Mcn9sFbGBAdmimWb2gLVDtFJzeKtDGIr76TUqmjZrw9LFXBMSU70lcs+C0/7fyCd6iBDqmksUcCOUIkisPHsQ==
   /emoji-regex/7.0.3:
@@ -211,7 +208,6 @@ packages:
   /hoist-non-react-statics/3.3.1:
     dependencies:
       react-is: 16.12.0
-    dev: false
     resolution:
       integrity: sha512-wbg3bpgA/ZqWrZuMOeJi8+SKMhr7X9TesL/rXMjTzh0p0JUBo3II8DHboYbuIXWRlttrUFxwcu/5kygrCw8fJw==
   /ink-text-input/3.2.1:
@@ -278,7 +274,6 @@ packages:
     resolution:
       integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==
   /js-tokens/4.0.0:
-    dev: false
     resolution:
       integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
   /lodash.throttle/4.1.1:
@@ -298,7 +293,6 @@ packages:
   /loose-envify/1.4.0:
     dependencies:
       js-tokens: 4.0.0
-    dev: false
     hasBin: true
     resolution:
       integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -357,7 +351,6 @@ packages:
     resolution:
       integrity: sha512-LMxFfAGrcS3kETtQaCkTKjMiifahaMySFDn71fZUNpPHZQEzmk/GiAeIT8JSOrHB23fnuCOMruL2a8NYlw+8Gw==
   /react-is/16.12.0:
-    dev: false
     resolution:
       integrity: sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
   /react-reconciler/0.24.0_react@16.12.0:
@@ -419,7 +412,6 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       symbol-observable: 1.2.0
-    dev: false
     resolution:
       integrity: sha512-vKv4WdiJxOWKxK0yRoaK3Y4pxxB0ilzVx6dszU2W8wLxlb2yikRph4iV/ymtdJ6ZxpBLFbyrxklnT5yBbQSl3Q==
   /regenerator-runtime/0.13.3:
@@ -537,7 +529,6 @@ packages:
     resolution:
       integrity: sha512-oRSIpR8pxT1Wr2FquTNnGet79b3BWljqOuoW/h4oBhxJ/HUbX5nX6JSruTkvXDCFMwDPvsaTTbvMLKZWSy0R5g==
   /symbol-observable/1.2.0:
-    dev: false
     engines:
       node: '>=0.10.0'
     resolution:
@@ -553,7 +544,7 @@ packages:
     resolution:
       integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
   /typescript/3.7.3:
-    dev: false
+    dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true

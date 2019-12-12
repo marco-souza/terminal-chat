@@ -1,12 +1,19 @@
 {
+	"name": "tt-chat",
+	"version": "0.1.2",
+	"description": "A simple terminal chat.",
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/marco-souza/terminal-chat.git"
+	},
 	"scripts": {
 		"watch": "tsc -w -p .",
 		"prestart": "npx pnpm install",
-		"start": "tsc -p . && node dist/main"
+		"start": "npm run build && ./dist/main",
+		"build": "tsc -p . && sed -i '1i#! env node' dist/main.js && chmod +x dist/main.js"
 	},
 	"dependencies": {
-		"@types/react": "^16.9.15",
-		"@types/react-redux": "^7.1.5",
 		"chalk": "^3.0.0",
 		"ink": "^2.6.0",
 		"ink-text-input": "^3.2.1",
@@ -15,10 +22,19 @@
 		"react-redux": "^7.1.3",
 		"redux": "^4.0.4",
 		"redux-observable": "^1.2.0",
-		"rxjs": "^6.5.3",
-		"typescript": "^3.7.3"
+		"rxjs": "^6.5.3"
 	},
 	"devDependencies": {
-		"@types/node": "^12.12.14"
+		"@types/react": "^16.9.15",
+		"@types/react-redux": "^7.1.5",
+		"@types/node": "^12.12.14",
+		"typescript": "^3.7.3"
+	},
+	"files": [
+		"dist/*",
+		"bin/*"
+	],
+	"bin": {
+		"tchat": "./dist/main.js"
 	}
 }
