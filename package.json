@@ -1,12 +1,13 @@
 {
 	"scripts": {
 		"watch": "tsc -w -p .",
-		"prestart": "tsc -p .",
-		"start": "node dist/main"
+		"prestart": "npx pnpm install",
+		"start": "tsc -p . && node dist/main"
 	},
 	"dependencies": {
 		"@types/react": "^16.9.15",
 		"@types/react-redux": "^7.1.5",
+		"chalk": "^3.0.0",
 		"ink": "^2.6.0",
 		"ink-text-input": "^3.2.1",
 		"react": "^16.12.0",

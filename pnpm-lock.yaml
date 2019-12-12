@@ -1,11 +1,12 @@
 dependencies:
   '@types/react': 16.9.15
   '@types/react-redux': 7.1.5
+  chalk: 3.0.0
   ink: 2.6.0_e1f4dc9876e8b65deb5656daab152814
   ink-text-input: 3.2.1
   react: 16.12.0
   react-dom: 16.12.0_react@16.12.0
-  react-redux: 7.1.3_9a2f9d4864311d39d6f2623bd2f887e8
+  react-redux: 7.1.3_react@16.12.0+redux@4.0.4
   redux: 4.0.4
   redux-observable: 1.2.0_redux@4.0.4+rxjs@6.5.3
   rxjs: 6.5.3
@@ -124,6 +125,9 @@ packages:
       node: '>=8'
     peerDependencies:
       '@types/react': '>=16.8.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
     resolution:
       integrity: sha512-v0A231a/lfOo6kxQtmEkdBfTApvC21aJYukA8pkKnoTvVqh3Wmm7/Rwy4GBCHTTHVoLVA5qsBDDvf1XY1nIV2g==
   /chalk/3.0.0:
@@ -370,7 +374,7 @@ packages:
       react: ^16.0.0
     resolution:
       integrity: sha512-gAGnwWkf+NOTig9oOowqid9O0HjTDC+XVGBCAmJYYJ2A2cN/O4gDdIuuUQjv8A4v6GDwVfJkagpBBLW5OW9HSw==
-  /react-redux/7.1.3_9a2f9d4864311d39d6f2623bd2f887e8:
+  /react-redux/7.1.3_react@16.12.0+redux@4.0.4:
     dependencies:
       '@babel/runtime': 7.7.4
       hoist-non-react-statics: 3.3.1
@@ -378,14 +382,11 @@ packages:
       loose-envify: 1.4.0
       prop-types: 15.7.2
       react: 16.12.0
-      react-dom: 16.12.0_react@16.12.0
       react-is: 16.12.0
       redux: 4.0.4
     dev: false
     peerDependencies:
       react: ^16.8.3
-      react-dom: '*'
-      react-native: '*'
       redux: ^2.0.0 || ^3.0.0 || ^4.0.0-0
     peerDependenciesMeta:
       react-dom:
@@ -596,6 +597,7 @@ specifiers:
   '@types/node': ^12.12.14
   '@types/react': ^16.9.15
   '@types/react-redux': ^7.1.5
+  chalk: ^3.0.0
   ink: ^2.6.0
   ink-text-input: ^3.2.1
   react: ^16.12.0
