@@ -12,7 +12,17 @@ export default ({ color }: InputProps) => {
   const { actions } = useMessages()
   const [message, setMessageText] = useState<string>('')
 
+  const handleCommands = (command: string) => {
+    switch (command) {
+      case 'q':
+      case 'quit':
+      case 'exit':
+        process.exit()
+    }
+  }
+
   const handleSubmit = () => {
+    handleCommands(message)
     message && actions.addMessage({
       username: process.env.USER || 'guest',
       message,
