@@ -5,7 +5,7 @@ import MessageList from './components/MessageList';
 
 export default () => {
   return (
-    <Box width='100vw'>
+    <Box flexDirection="column" justifyContent="space-between">
       <MessageList />
       <Input />
     </Box>
