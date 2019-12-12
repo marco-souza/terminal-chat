@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
-import { Box, Text, Color } from 'ink'
+import { Box, Text, Color, ColorProps } from 'ink'
 import TextInput from 'ink-text-input';
 
 import useMessages from '../redux/messages';
 
-export default () => {
+interface InputProps {
+  color: ColorProps['rgb'];
+}
+
+export default ({ color }: InputProps) => {
   const { actions } = useMessages()
   const [message, setMessageText] = useState<string>('')
 
@@ -18,7 +22,7 @@ export default () => {
 
   return (
     <Box padding={1}>
-      {<Color green>
+      {<Color rgb={color}>
         <Text key='title' bold underline>
           {process.env.USER || 'tchat'}
         </Text>
