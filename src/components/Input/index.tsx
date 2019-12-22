@@ -2,31 +2,20 @@ import React, { useState } from 'react'
 import { Box, Text, Color, ColorProps } from 'ink'
 import TextInput from 'ink-text-input';
 
-import useMessages from '../redux/messages';
+import handleCommands from './commands';
 
 interface InputProps {
   color: ColorProps['rgb'];
+  say: Function;
 }
 
-export default ({ color }: InputProps) => {
-  const { actions } = useMessages()
+export default ({ color, say }: InputProps) => {
   const [message, setMessageText] = useState<string>('')
 
-  const handleCommands = (command: string) => {
-    switch (command) {
-      case 'q':
-      case 'quit':
-      case 'exit':
-        process.exit()
-    }
-  }
 
   const handleSubmit = () => {
     handleCommands(message)
-    message && actions.addMessage({
-      username: process.env.USER || 'guest',
-      message,
-    })
+    message && say(message)
     message && setMessageText('')
   }
 
