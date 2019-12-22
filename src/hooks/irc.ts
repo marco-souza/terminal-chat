@@ -11,6 +11,7 @@ type IRCHookOptions = {
 
 export const useIRC = ({ host = '', nick = '', channel = '#general', port = 6667 }: IRCHookOptions) => {
   const { messageList, actions } = useMessages()
+  const [isReady, setIsReady] = useState(false)
 
   const client = IRCSingleton.getInstance({
     host,
@@ -31,8 +32,7 @@ export const useIRC = ({ host = '', nick = '', channel = '#general', port = 6667
         })
       },
       registered: () => {
-        console.log("GOOOOOO")
-        // TODO: make loader
+        setIsReady(true)
       },
     }
   })
@@ -47,6 +47,7 @@ export const useIRC = ({ host = '', nick = '', channel = '#general', port = 6667
 
   return {
     messages: messageList,
+    isReady,
     say,
   }
 }

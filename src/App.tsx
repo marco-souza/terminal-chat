@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, ColorProps } from 'ink'
 import Input from './components/Input';
 import MessageList from './components/MessageList';
+import Spinner from './components/Spinner';
 
 import { useIRC } from './hooks/irc'
 
@@ -11,7 +12,7 @@ const genRandomColor = () => Math.floor(Math.random() * 255)
 const genRandomRGB = () => Array.from(Array(3)).map(genRandomColor) as RGB
 
 export default () => {
-  const { say } = useIRC({
+  const { say, isReady } = useIRC({
     host: 'tremtec.com',
     nick: process.env.USER || 'guest',
   })
@@ -19,7 +20,10 @@ export default () => {
   return (
     <Box flexDirection="column">
       <MessageList />
-      <Input color={genRandomRGB()} say={say} />
+      {isReady
+        ? <Input color={genRandomRGB()} say={say} />
+        : <Spinner />
+      }
     </Box>
   )
 }
