@@ -11,12 +11,13 @@
 		"watch": "tsc -w -p .",
 		"prestart": "npx pnpm install",
 		"start": "npm run build && node dist/main",
-		"build": "tsc -p . && sed -i '1i#! env node' dist/main.js && chmod +x dist/main.js"
+		"build": "tsc -p .; sed -i '1i#! env node' dist/main.js; chmod +x dist/main.js"
 	},
 	"dependencies": {
 		"chalk": "^3.0.0",
 		"ink": "^2.6.0",
 		"ink-text-input": "^3.2.1",
+		"irc": "^0.5.2",
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0",
 		"react-redux": "^7.1.3",
@@ -25,10 +26,11 @@
 		"rxjs": "^6.5.3"
 	},
 	"devDependencies": {
-		"@types/react": "^16.9.15",
+		"@types/irc": "^0.3.33",
+		"@types/node": "^12.12.21",
+		"@types/react": "^16.9.17",
 		"@types/react-redux": "^7.1.5",
-		"@types/node": "^12.12.14",
-		"typescript": "^3.7.3"
+		"typescript": "^3.7.4"
 	},
 	"files": [
 		"dist/*",
