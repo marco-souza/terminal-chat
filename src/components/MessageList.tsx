@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react'
-import { Text, Box, Static, Color } from 'ink'
+import { Text, Box, Static } from 'ink'
 
-import useMessages from '../redux/messages';
+import { MessageType } from '../redux/messages/constants'
+import { useIRC } from '../hooks/irc'
 
 export default () => {
-  const { messageList } = useMessages()
-
+  const { messages } = useIRC({})
   return (
-    <Box>
+    <Box height={3}>
       <Static>
-        {messageList
+        {messages
           .map(({ username, message }) => (
-            <Box width='100%' key={username + message} paddingLeft={2}>
+            <Box width='100vw' key={username + message}>
               <Text bold>{username} said: </Text>
               <Text>{message}</Text>
             </Box>
