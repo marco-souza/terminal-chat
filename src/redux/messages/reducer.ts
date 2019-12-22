@@ -5,7 +5,10 @@
 import { ADD_MESSAGE, MessageType, MessagesInitialStateType } from './constants'
 
 export const initialState: MessagesInitialStateType = {
-  messageList: [],
+  messageList: [{
+    username: 'tchat',
+    message: 'Welcome to tchat! -__(^.^)',
+  }],
 }
 
 interface ReduxActionType<PayloadType> {

@@ -19,9 +19,13 @@ export default () => {
 
   return (
     <Box flexDirection="column">
-      <MessageList />
       {isReady
-        ? <Input color={genRandomRGB()} say={say} />
+        ? (
+          <>
+            <MessageList />
+            <Input color={genRandomRGB()} say={say} />
+          </>
+        )
         : <Spinner />
       }
     </Box>
